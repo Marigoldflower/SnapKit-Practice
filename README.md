@@ -26,7 +26,7 @@ subView.snp.makeConstraints { make in
       make.width.height.equalTo(100)
       make.center.equalToSuperview()
 
-      이렇게 centerX, centerY를 나눠서 사용할 수도 있음⭐️
+      ⭐️ 이렇게 centerX, centerY를 나눠서 사용할 수도 있음
       make.centerX.equalToSuperview()
       make.centerY.eqaulToSuperview()
 }
@@ -38,7 +38,7 @@ subView.snp.makeConstraints { make in
       make.width.eqaulTo(100)
       make.height.eqaulTo(200)
 
-      width, height 값이 같을 경우 합쳐서 사용할 수 있음
+      ⭐️ width, height 값이 같을 경우 합쳐서 사용할 수 있음
       make.width.height.equalTo(100)
 }
 ```
