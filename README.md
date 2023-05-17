@@ -14,35 +14,44 @@ top만 잡혀있고 bottom은 잡혀있지 않다면 height를 설정해주어�
 
 ## SnapKit 실제 사용
 - tableView 만들 때처럼 leading, trailing, top, bottom의 Constraints를 모두 0으로 만들기
-
-    subView.snp.makeConstraints { make in
-		make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
-    }
-
-subView를 정중앙에 놓기 
+```
 subView.snp.makeConstraints { make in
-		make.width.height.equalTo(100)
-		make.center.equalToSuperview()
-
-		이렇게 centerX, centerY를 나눠서 사용할 수도 있음
-		make.centerX.equalToSuperview()
-		make.centerY.eqaulToSuperview()
+      make.edges.equalToSuperview().inset(UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0))
 }
+```
 
-subView width, height값 설정법
+- subView를 정중앙에 놓기 
+```
 subView.snp.makeConstraints { make in
-		make.width.eqaulTo(100)
-		make.height.eqaulTo(200)
+      make.width.height.equalTo(100)
+      make.center.equalToSuperview()
 
-		width, height 값이 같을 경우 합쳐서 사용할 수 있음
-		make.width.height.equalTo(100)
+      이렇게 centerX, centerY를 나눠서 사용할 수도 있음⭐️
+      make.centerX.equalToSuperview()
+      make.centerY.eqaulToSuperview()
 }
+```
 
-subView leading, trailing, top, bottom 값 설정법 
+- subView width, height값 설정법
+```
 subView.snp.makeConstraints { make in
-		make.leading.equalTo(view.snp.leading).offset(30)
-		make.top.equalTo(view.snp.top).offset(30)
-		make.trailing.equalTo(view.snp.trailing).offset(-30)
-		make.bottom.equalTo(view.snp.bottom).offset(-30)
+      make.width.eqaulTo(100)
+      make.height.eqaulTo(200)
+
+      width, height 값이 같을 경우 합쳐서 사용할 수 있음
+      make.width.height.equalTo(100)
 }
+```
+
+- subView leading, trailing, top, bottom 값 설정법 
+```
+subView.snp.makeConstraints { make in
+      make.leading.equalTo(view.snp.leading).offset(30)
+      make.top.equalTo(view.snp.top).offset(30)
+      make.trailing.equalTo(view.snp.trailing).offset(-30)
+      make.bottom.equalTo(view.snp.bottom).offset(-30)
+}
+```
+
+
 
